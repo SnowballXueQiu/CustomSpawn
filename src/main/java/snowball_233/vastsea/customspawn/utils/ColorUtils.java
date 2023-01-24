@@ -1,4 +1,4 @@
-package utils;
+package snowball_233.vastsea.customspawn.utils;
 
 import org.bukkit.ChatColor;
 

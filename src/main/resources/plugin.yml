@@ -3,3 +3,6 @@ version: '${project.version}'
 main: snowball_233.vastsea.customspawn.CustomSpawn
 authors: [ Snowball_233 ]
 description: A lightweight plugin for fixing the position and orientation of the spawnpoint.
+
+commands:
+  setspawn:

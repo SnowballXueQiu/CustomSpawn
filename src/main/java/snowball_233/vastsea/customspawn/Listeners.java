@@ -11,9 +11,9 @@ public class Listeners implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
         if (CustomSpawn.getInstance().getSpawnConfig().get("spawn") == null) {
-            e.getPlayer().sendMessage(ColorUtils.colorMsg("&4&l&c));
+            e.getPlayer().sendMessage(ColorUtils.colorMsg("&4&l&c"));
         } else {
-            e.getPlayer().setGameMode(GameMode.ADVENTURE);
+            e.getPlayer().setGameMode(GameMode.CREATIVE);
             Location spawnLoc = (Location)CustomSpawn.getInstance().getSpawnConfig().get("spawn");
             e.getPlayer().teleport(spawnLoc);
         }

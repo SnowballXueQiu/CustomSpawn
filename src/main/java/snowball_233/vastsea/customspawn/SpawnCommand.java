@@ -9,12 +9,12 @@ import snowball_233.vastsea.customspawn.utils.ColorUtils;
 public class SpawnCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage(ColorUtils.colorMsg("&c));
+            sender.sendMessage(ColorUtils.colorMsg("&c"));
             return true;
         }
         Player p = (Player)sender;
         if (!sender.hasPermission("customspawn.admin")) {
-            p.sendMessage(ColorUtils.colorMsg("&c));
+            p.sendMessage(ColorUtils.colorMsg("&c"));
             return true;
         }
         if (args.length >= 0) {
