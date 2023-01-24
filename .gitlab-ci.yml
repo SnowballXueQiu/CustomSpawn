@@ -22,8 +22,10 @@ stages:
 
 clone-repo:
   stage: clone
+  tags:
+    - docker
   script:
-    - git clone https://git.vastsea.cc:444/Snowball_233/customspawn
+    - git clone https://git.vastsea.cc:444/Snowball_233/customspawn.git
 
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
