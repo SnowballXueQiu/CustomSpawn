@@ -28,7 +28,7 @@ build-job:       # This job runs in the build stage, which runs first.
     - docker
   script:
     - apt update
-    - apt install git
+    - apt -y install git
     - git clone https://git.vastsea.cc:444/Snowball_233/customspawn.git
     - mvn clean package
   artifacts:
