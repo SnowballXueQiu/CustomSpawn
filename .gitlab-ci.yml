@@ -19,11 +19,12 @@
 variables:
    GIT_STRATEGY: none
 
+image: gitlab/gitlab-runner:latest
+
 stages:        # List of stages for jobs, and their order of execution
   - build
 
 build-job:       # This job runs in the build stage, which runs first.
-  image: gitlab/gitlab-runner:latest
   stage: build
   tags:
     - docker
