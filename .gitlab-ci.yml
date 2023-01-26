@@ -31,9 +31,12 @@ build-job:       # This job runs in the build stage, which runs first.
   artifacts:
     paths:
       - "**/target"
+
 release-job: 
-  stage: release
   image: registry.gitlab.com/gitlab-org/release-cli:latest
+  stage: release
+  script:
+     - echo "running release_job for $TAG"
   release:
     tag_name: 'v0.$CI_PIPELINE_IID'
     description: 'v0.$CI_PIPELINE_IID'
