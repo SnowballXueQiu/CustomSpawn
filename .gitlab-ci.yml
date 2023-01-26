@@ -20,6 +20,7 @@ image: maven:latest
 
 stages:        # List of stages for jobs, and their order of execution
   - build
+  - release
 
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
@@ -30,3 +31,10 @@ build-job:       # This job runs in the build stage, which runs first.
   artifacts:
     paths:
       - "**/target"
+release_job:
+  stage: release
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  release:
+    tag_name: 'v0.$CI_PIPELINE_IID'
+    description: 'v0.$CI_PIPELINE_IID'
+    ref: '$CI_COMMIT_SHA'
