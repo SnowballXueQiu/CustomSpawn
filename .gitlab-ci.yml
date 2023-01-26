@@ -16,9 +16,6 @@
 # This specific template is located at:
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
 
-variables:
-   GIT_STRATEGY: none
-
 image: gitlab/gitlab-runner:latest
 
 stages:        # List of stages for jobs, and their order of execution
@@ -29,10 +26,6 @@ build-job:       # This job runs in the build stage, which runs first.
   tags:
     - docker
   script:
-    # - apt update
-    # - apt -y install git
-    # - apt -y install maven
-    - git clone https://git.vastsea.cc:444/Snowball_233/customspawn.git
     - mvn clean package
   artifacts:
     paths:
